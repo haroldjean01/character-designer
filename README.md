@@ -49,4 +49,3 @@ Stretch Ideas for fun:
 -   Wrap the catchphrase input and button in a form tag and use a 'submit' handler with the new FormData() constructor to get data from the input. (Hint: Look up e.preventDefault() and why it's useful in this case)
 -   Use a radio button (probably the most challenging form input) to change between 'cartoon mode' and 'photo mode'. Load a different set of images (photo of duck vs cartoon duck, etc) depending on the mode.
 -   In addition to keeping track of the number of times each dropdown was changed, keep track of (and display to the user) a "history" of those changes.
-    asdfasdf

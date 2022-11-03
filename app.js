@@ -78,5 +78,5 @@ function displayCatchphrases() {
     }
     // and for each catchphrase
     // create an HTML element with the catchphrase as its text content
-    // and append that HTML element to the cleared-out DOM
+    // and append that HTML element to the cleared-out
 }

@@ -12,7 +12,7 @@ const catchphraseButton = document.getElementById('catchphrase-button');
 
 // set state for how many times the user changes the head, middle, and bottom
 let headCounter = 0;
-let midddleCounter = 0;
+let middleCounter = 0;
 let bottomCounter = 0;
 // set state for all of the character's catchphrases
 let catchphrases = [];
@@ -23,27 +23,36 @@ headDropdown.addEventListener('change', (e) => {
     // increment the head change count state
     headCounter++;
     // update the dom for the head (use style.backgroundImage on the headEl div instead of trying to set the .src -- it's NOT an img tag!)
-    headEl.style.backgroundImage = ``;
+    headEl.style.backgroundImage = `url("./assets/${value}-head.png")`;
     // update the stats to show the new count (call displayStats() to do this work)
+    displayStats();
 });
 
-middleDropdown.addEventListener('change', () => {
+middleDropdown.addEventListener('change', (e) => {
     // get the value of the middle dropdown
-    // increment the middle change count state
-    // update the dom for the middle (NOTE: use style.backgroundImage on the middleEl div instead of trying to set the .src -- it's NOT an img tag!)
-    // update the stats to show the new count (call displayStats() to do this work)
-});
-
-bottomDropdown.addEventListener('change', () => {
-    // get the value of the bottom dropdown
-    // increment the bottom change count state
-    // update the dom for the bottom (NOTE use style.backgroundImage on the bottomEl div instead of trying to set the .src -- it's NOT an img tag!)
-    // update the stats to show the new count (call displayStats() to do this work)
-});
-
-catchphraseButton.addEventListener('click', () => {
-    // get the value of the catchphrase input
     const value = e.target.value;
+    // increment the middle change count state
+    middleCounter++;
+    // update the dom for the middle (NOTE: use style.backgroundImage on the middleEl div instead of trying to set the .src -- it's NOT an img tag!)
+    middleEl.style.backgroundImage = `url("./assets/${value}-middle.png")`;
+    // update the stats to show the new count (call displayStats() to do this work)
+    displayStats();
+});
+
+bottomDropdown.addEventListener('change', (e) => {
+    // get the value of the bottom dropdown
+    const value = e.target.value;
+    // increment the bottom change count state
+    bottomCounter++;
+    // update the dom for the bottom (NOTE use style.backgroundImage on the bottomEl div instead of trying to set the .src -- it's NOT an img tag!)
+    bottomEl.style.backgroundImage = `url("./assets/${value}-pants.png")`;
+    // update the stats to show the new count (call displayStats() to do this work)
+    displayStats();
+});
+
+catchphraseButton.addEventListener('click', (e) => {
+    // get the value of the catchphrase input
+
     // push the new catchphrase to the catchphrase array in state
     catchphrases.push(catchphraseInput.value);
 
@@ -55,17 +64,17 @@ catchphraseButton.addEventListener('click', () => {
 
 function displayStats() {
     // text content of the reportEl to tell the user how many times they've changed each piece of the state
-    reportEl.textContent = `You have changed heads ${headCounter} times.`;
+    reportEl.textContent = `You have changed heads ${headCounter} times. You have changed shirt ${middleCounter} times.You have changed pants ${bottomCounter} times.`;
 }
 
 function displayCatchphrases() {
     // clear out the DOM for the currently displayed catchphrases
-    catchphraseInput.textContent = '';
+    catchphrasesEl.textContent = '';
     // loop through each catchphrase in state
-    for (let catchphrase of catchphrases) {
+    for (let phrase of catchphrases) {
         const p = document.createElement('p');
-        p.textContent = catchphrase;
-        catchphrases.append(p);
+        p.textContent = phrase;
+        catchphrasesEl.append(p);
     }
     // and for each catchphrase
     // create an HTML element with the catchphrase as its text content

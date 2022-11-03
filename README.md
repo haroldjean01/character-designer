@@ -2,14 +2,14 @@
 
 ## Learning Objectives
 
-- Use a for/of loop to run a function against every item in an array (i.e., console.log , alert ).
-- In response to a user event, add a new item to a state array and display the new state to the user (i.e., add a new todo).
-- Use the .value property to get the value of a 'grabbed' HTML form input tag
-- Use .createElement() and .append() to display a new HTML tag (with .textContent ) to a grabbed DOM element on click.
-- Use .createElement() and .append() to add a list of new DOM  elements to a grabbed DOM element on click
-- Create a select element to create a dropdown.
-- Use `+` and `${}` to concatenate strings.
-- Identify what variables are in a given scope/closure
+-   Use a for/of loop to run a function against every item in an array (i.e., console.log , alert ).
+-   In response to a user event, add a new item to a state array and display the new state to the user (i.e., add a new todo).
+-   Use the .value property to get the value of a 'grabbed' HTML form input tag
+-   Use .createElement() and .append() to display a new HTML tag (with .textContent ) to a grabbed DOM element on click.
+-   Use .createElement() and .append() to add a list of new DOM  elements to a grabbed DOM element on click
+-   Create a select element to create a dropdown.
+-   Use `+` and `${}` to concatenate strings.
+-   Identify what variables are in a given scope/closure
 
 ## Live Example:
 
@@ -23,10 +23,10 @@ User [this repository](https://github.com/alchemycodelab/half-baked-web-01-chara
 
 The following is required for your assignment to be graded:
 
-- PR open from dev to main
-- PR Passes CI (lint + tests)
-- PR preview on netlify
-- At least 4 commits (for the individual working features)
+-   PR open from dev to main
+-   PR Passes CI (lint + tests)
+-   PR preview on netlify
+-   At least 4 commits (for the individual working features)
 
 | Events . . .                                                                                                                                          |     |
 | :---------------------------------------------------------------------------------------------------------------------------------------------------- | --: |
@@ -43,9 +43,9 @@ The following is required for your assignment to be graded:
 
 Stretch Ideas for fun:
 
-- Add some conditional logic that prevents a catch phrase from being added if value is empty
-- Add the option for the user to name the character and store the name in state. Display that name in big letters at the top.
-- Make three arrays of objects of this kind of shape: [ { display: "Duck head", value: "1" }, { display: "Blue Bird Head", value: "2" }, { display: "Horse Head", value: "3" ]. Now, instead of hard coding your dropdown options, generate them dynamically by looping over these arrays.
-- Wrap the catchphrase input and button in a form tag and use a 'submit' handler with the new FormData() constructor to get data from the input. (Hint: Look up e.preventDefault() and why it's useful in this case)
-- Use a radio button (probably the most challenging form input) to change between 'cartoon mode' and 'photo mode'. Load a different set of images (photo of duck vs cartoon duck, etc) depending on the mode.
-- In addition to keeping track of the number of times each dropdown was changed, keep track of (and display to the user) a "history" of those changes.
+-   Add some conditional logic that prevents a catch phrase from being added if value is empty
+-   Add the option for the user to name the character and store the name in state. Display that name in big letters at the top.
+-   Make three arrays of objects of this kind of shape: [ { display: "Duck head", value: "1" }, { display: "Blue Bird Head", value: "2" }, { display: "Horse Head", value: "3" ]. Now, instead of hard coding your dropdown options, generate them dynamically by looping over these arrays.
+-   Wrap the catchphrase input and button in a form tag and use a 'submit' handler with the new FormData() constructor to get data from the input. (Hint: Look up e.preventDefault() and why it's useful in this case)
+-   Use a radio button (probably the most challenging form input) to change between 'cartoon mode' and 'photo mode'. Load a different set of images (photo of duck vs cartoon duck, etc) depending on the mode.
+-   In addition to keeping track of the number of times each dropdown was changed, keep track of (and display to the user) a "history" of those changes.
